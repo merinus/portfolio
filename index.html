@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marcin Wladymiruk">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+        <header>
+            <div class="top_info">
+                <div id="cookies">
+                    <div class="cookies_info">Ta strona zawiera cookies.</div>
+                    <div class="buttons">
+                        <button class="btn1">Ukryj</button>
+                        <button class="btn2">Pokaż</button>
+                    </div>
+                </div>
+                <div class="top_sentence">
+                    <h1>Moje Portfolio</h1>
+                </div>
+
+                <div class="photos">
+                    <div class="frame">
+                        <img id="photo1" src="images/a1.jpeg" alt="Wodospad">
+                    </div>
+                    <div class="frame">
+                        <img id="photo2" src="images/b1.jpg" alt="Jesień">
+                    </div>
+                    <div class="frame">
+                        <img id="photo3" src="images/c1.jpg" alt="Tory">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div>
+                <h2>Prześlij informacje o sobie</h2>
+                <form>
+                    <p>Ulubiony gatunek muzyki:</p>
+                    <input type="checkbox" name="music" value="Pop">Pop<br>
+                    <input type="checkbox" name="music" value="Rock">Rock&Roll<br>
+                    <input type="checkbox" name="music" value="Jazz">Jazz<br>
+                    <input type="checkbox" name="music" value="HipHop">Hip Hop<br>
+                    <input type="checkbox" name="music" value="Classic">Klasyczna<br>
+                    <input type="checkbox" name="music" value="Metal">Metal<br><br>
+                    <p>Jak spędzałeś/aś Sylwestra?:</p>
+                    <input type="radio" name="sylwester" value="house" checked>Na domówce<br>
+                    <input type="radio" name="sylwester" value="concert">Na koncercie<br>
+                    <input type="radio" name="sylwester" value="club">W klubie<br>
+                    <p>Czy odpalałeś ognie sztuczne?:</p>
+                    <select name="fireworks">
+                        <option value="yes">Tak</option>
+                        <option value="no">Nie</option>
+                    </select><br><br>
+                    <input type="reset" value="Resetuj">
+                    <input type="submit" value="Wyślij">
+                </form>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="e_mail_form">
+                <h2>Napisz do mnie wiadomość</h2>
+                <form action="php/action_page.php" method="post">
+                    Imię i Nazwisko:<br>
+                    <input type="text" name="full_name" value="Imię i Nazwisko">
+                    <br>
+                    Adres e-mail:<br>
+                    <input type="text" name="email" value="E-mail">
+                    <br>
+                    Treść wiadomości:<br>
+                    <textarea name="message" style="width:200px; height:200px">Wiadomość</textarea>
+                    <br><br>
+                    <input type="submit" value="Wyślij">
+                </form>
+            </div>
+        </footer>
+</body>
+<script src="js/cookies.js"></script>
+<script src="js/images.js"></script>
+</html>

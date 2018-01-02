@@ -1,0 +1,86 @@
+header{
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: dimgray;
+    height: 100vh;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.top_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cookies{
+    display: flex;
+    flex-direction: column;
+}
+
+.cookies_info{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    background-color: darkolivegreen;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.top_sentence{
+    margin-top: 60px;
+}
+
+h1{
+    font-size: 50px;
+    color: brown;
+    display: flex;
+    justify-content: center;
+}
+
+.photos{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.frame{
+    width: 350px;
+    height: 233px;
+}
+
+#photo1, #photo2, #photo3{
+    height: 80%;
+    width: 80%;
+}
+
+section {
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: darkslategray;
+    height: 100vh;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: darksalmon;
+    height: 100vh;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
