@@ -1,4 +1,4 @@
-header{
+/*header{
     margin: 0 auto;
     background-position: center;
     background-size: cover;
@@ -9,16 +9,23 @@ header{
     display: flex;
     justify-content: center;
 }
-
+*/
 .top_info{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+
 #cookies{
     display: flex;
     flex-direction: column;
+}
+
+.empty{
+    width: 1200px;
+    height: 20px;
 }
 
 .cookies_info{
@@ -33,8 +40,20 @@ header{
     justify-content: center;
 }
 
+#first{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: darkslategray;
+    height: 100vh;
+    max-width: 1200px;
+    position: relative;
+}
+
 .top_sentence{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 h1{
@@ -45,12 +64,14 @@ h1{
 }
 
 .photos{
-    width: 1000px;
     display: flex;
     justify-content: center;
 }
 
 .frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 350px;
     height: 233px;
 }
@@ -60,7 +81,7 @@ h1{
     width: 80%;
 }
 
-section {
+#second {
     margin: 0 auto;
     background-position: center;
     background-size: cover;
