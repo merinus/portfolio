@@ -6,6 +6,8 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <title>Portfolio</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
@@ -32,62 +34,106 @@
             </div>
 
             <div class="photos">
-                <div class="frame">
-                    <img id="photo1" src="images/a1.jpeg" alt="Wodospad">
+                <div class="my_box">
+                    <div class="frame">
+                        <img id="photo1" src="images/a1.jpeg" alt="Wodospad">
+                    </div>
+                    <div class="under_photo">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </div>
-                <div class="frame">
-                    <img id="photo2" src="images/b1.jpg" alt="Jesień">
+                <div class="my_box">
+                    <div class="frame">
+                        <img id="photo2" src="images/b1.jpg" alt="Jesień">
+                    </div>
+                    <div class="under_photo">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </div>
-                <div class="frame">
-                    <img id="photo3" src="images/c1.jpg" alt="Tory">
+
+
+                <div class="my_box">
+                    <div class="frame">
+                        <img id="photo3" src="images/c1.jpg" alt="Tory">
+                    </div>
+                    <div class="under_photo">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </section>
 
 
-        <section id="second">
+        <!--<section id="second">
             <div>
-                <h2>Prześlij informacje o sobie</h2>
-                <form>
-                    <p>Ulubiony gatunek muzyki:</p>
-                    <input type="checkbox" name="music" value="Pop">Pop<br>
-                    <input type="checkbox" name="music" value="Rock">Rock&Roll<br>
-                    <input type="checkbox" name="music" value="Jazz">Jazz<br>
-                    <input type="checkbox" name="music" value="HipHop">Hip Hop<br>
-                    <input type="checkbox" name="music" value="Classic">Klasyczna<br>
-                    <input type="checkbox" name="music" value="Metal">Metal<br><br>
-                    <p>Jak spędzałeś/aś Sylwestra?:</p>
-                    <input type="radio" name="sylwester" value="house" checked>Na domówce<br>
-                    <input type="radio" name="sylwester" value="concert">Na koncercie<br>
-                    <input type="radio" name="sylwester" value="club">W klubie<br>
-                    <p>Czy odpalałeś ognie sztuczne?:</p>
-                    <select name="fireworks">
-                        <option value="yes">Tak</option>
-                        <option value="no">Nie</option>
-                    </select><br><br>
-                    <input type="reset" value="Resetuj">
-                    <input type="submit" value="Wyślij">
-                </form>
+
 
             </div>
+        </section>-->
+
+        <section id="third">
+            <div>
+                <h2>Prześlij do mnie informacje o sobie:</h2>
+            </div>
+            <div class="email_form">
+                    <form action="php/action_page.php" method="post">
+                        <div class="my_form">
+                            <div>
+                                <p>Ulubiony gatunek muzyki:</p>
+                                <input type="checkbox" name="music" value="Pop">Pop<br>
+                                <input type="checkbox" name="music" value="Rock">Rock&Roll<br>
+                                <input type="checkbox" name="music" value="Jazz">Jazz<br>
+                                <input type="checkbox" name="music" value="HipHop">Hip Hop<br>
+                                <input type="checkbox" name="music" value="Classic">Klasyczna<br>
+                                <input type="checkbox" name="music" value="Metal">Metal<br><br>
+                                <p>Gdzie spędzałeś/aś Sylwestra?:</p>
+                                <input type="radio" name="sylwester" value="house" checked>Na domówce<br>
+                                <input type="radio" name="sylwester" value="concert">Na koncercie<br>
+                                <input type="radio" name="sylwester" value="club">W klubie<br>
+                                <p>Czy odpalałeś/aś ognie sztuczne?:</p>
+                                <select name="fireworks">
+                                    <option value="yes">Tak</option>
+                                    <option value="no">Nie</option>
+                                </select><br><br>
+                            </div>
+
+                            <div>
+                                Imię i Nazwisko:<br>
+                                <input type="text" name="full_name" value="Imię i Nazwisko">
+                                <br>
+                                Adres e-mail:<br>
+                                <input type="text" name="email" value="E-mail">
+                                <br>
+                                Treść wiadomości:<br>
+                                <textarea name="message" style="width:200px; height:200px">Wiadomość</textarea>
+                                <br><br>
+                            </div>
+                            <div>
+                                <input type="submit" name="submit" value="Wyślij">
+                            </div>
+                        </div>
+
+                    </form>
+            </div>
+
         </section>
 
         <footer>
-            <div class="e_mail_form">
-                <h2>Napisz do mnie wiadomość</h2>
-                <form action="php/action_page.php" method="post">
-                    Imię i Nazwisko:<br>
-                    <input type="text" name="full_name" value="Imię i Nazwisko">
-                    <br>
-                    Adres e-mail:<br>
-                    <input type="text" name="email" value="E-mail">
-                    <br>
-                    Treść wiadomości:<br>
-                    <textarea name="message" style="width:200px; height:200px">Wiadomość</textarea>
-                    <br><br>
-                    <input type="submit" value="Wyślij">
-                </form>
-            </div>
+            <div>Obserwuj mnie na:</div>
+            <img src="images/iconmonstr-facebook-6-32.png">
+            <img src="images/iconmonstr-twitter-3-32.png">
+            <img src="images/iconmonstr-google-plus-1-32.png">
+
         </footer>
 </body>
 <script src="js/cookies.js"></script>

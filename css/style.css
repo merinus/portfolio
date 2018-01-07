@@ -47,9 +47,9 @@
     background-position: center;
     background-size: cover;
     background-color: darkslategray;
-    height: 100vh;
+    height: 110vh;
     max-width: 1200px;
-    position: relative;
+    /*position: relative;*/
 }
 
 .top_sentence{
@@ -66,6 +66,7 @@ h1{
 .photos{
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .frame{
@@ -74,6 +75,11 @@ h1{
     align-items: center;
     width: 350px;
     height: 233px;
+}
+
+.under_photo{
+    width: 350px;
+    margin: 20px;
 }
 
 #photo1, #photo2, #photo3{
@@ -86,14 +92,14 @@ h1{
     background-position: center;
     background-size: cover;
     background-color: darkslategray;
-    height: 100vh;
+    height: 110vh;
     max-width: 1200px;
-    position: relative;
+    /*position: relative;*/
     display: flex;
     justify-content: center;
 }
 
-footer{
+#third{
     margin: 0 auto;
     background-position: center;
     background-size: cover;
@@ -104,4 +110,23 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.my_form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer{
+    margin: 5px auto;
+    width: 1200px;
+    padding: 10px 0;
+    height: 36px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 30px;
 }
