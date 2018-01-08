@@ -130,3 +130,45 @@ footer{
     font-family: 'Sedgwick Ave Display', cursive;
     font-size: 30px;
 }
+
+@media only screen and (max-width: 320px){
+    header{
+        margin: 0 auto;
+    }
+    .empty{
+        width: 320px;
+    }
+    .cookies_info{
+        width: 320px;
+    }
+    .top_sentence{
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        font-size: 30px;
+    }
+    #first{
+        display: flex;
+        justify-content: center;
+        max-width: 300px;
+        height: 1400px;
+    }
+    .photos{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .frame{
+        width: 280px;
+        display: flex;
+        justify-content: center;
+    }
+    .under_photo{
+        width: 260px;
+    }
+    #photo1, #photo2, #photo3{
+        width: 260px;
+        height: 173px;
+    }
+}
