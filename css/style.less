@@ -1,0 +1,196 @@
+/*header{
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: dimgray;
+    height: 100vh;
+    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+*/
+@max-width: 1200px;
+
+#center-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.top_info{
+  #center-column;
+}
+
+
+
+#cookies{
+  display: flex;
+  flex-direction: column;
+}
+
+.empty{
+  width: @max-width;
+  height: 20px;
+}
+
+.cookies_info{
+  width: @max-width;
+  display: flex;
+  justify-content: center;
+  background-color: darkolivegreen;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#first{
+  #center-column;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-color: darkslategray;
+  height: 110vh;
+  max-width: @max-width;
+  /*position: relative;*/
+}
+
+.top_sentence{
+  margin-top: 10px;
+}
+
+h1{
+  font-size: 50px;
+  color: brown;
+  display: flex;
+  justify-content: center;
+}
+
+.photos{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.frame{
+  #center-column;
+  width: 350px;
+  height: 233px;
+}
+
+.under_photo{
+  width: 350px;
+  margin: 20px;
+}
+
+#photo1, #photo2, #photo3{
+  height: 80%;
+  width: 80%;
+}
+
+/*#s {
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-color: darkslategray;
+    height: 110vh;
+    max-width: 1200px;
+    /*position: relative;
+    display: flex;
+    justify-content: center;
+}*/
+
+#second{
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-color: darksalmon;
+  height: 100vh;
+  max-width: @max-width;
+  position: relative;
+  #center-column;
+  justify-content: center;
+}
+
+.my_form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer{
+  margin: 5px auto;
+  width: @max-width;
+  padding: 10px 0;
+  height: 36px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 320px){
+  header{
+    margin: 0 auto;
+  }
+  .empty{
+    width: 320px;
+  }
+  .cookies_info{
+    width: 320px;
+  }
+  .top_sentence{
+    display: flex;
+    justify-content: center;
+  }
+  h1{
+    font-size: 30px;
+  }
+  #first{
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+    height: 1400px;
+  }
+  .photos{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .frame{
+    width: 280px;
+    display: flex;
+    justify-content: center;
+  }
+  .under_photo{
+    width: 260px;
+  }
+  #photo1, #photo2, #photo3{
+    width: 260px;
+    height: 173px;
+  }
+  #second{
+    max-width: 300px;
+    height: 1000px;
+  }
+  .info_sentence{
+    font-size: 20px;
+    width: 260px;
+  }
+  .my_form{
+    #center-column;
+  }
+  footer{
+    width: 300px;
+    height: 180px;
+    #center-column;
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
