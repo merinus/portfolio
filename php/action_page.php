@@ -29,9 +29,17 @@ if ($fireworks == "yes"){
 }
 echo "Czy odpalałeś ognie sztuczne: ".$fireworks;
 echo "<br>";
-echo "Ulubiony rodzaj muzyki: ";
-$music = implode(', ', $_POST['music']);
-echo $music;
+echo "Ulubiony rodzaj muzyki: </br>";
+
+if(isset($_POST['submit'])){//to run PHP script on submit
+    if(!empty($_POST['music'])){
+// Loop to store and display values of individual checked checkbox.
+        foreach($_POST['music'] as $selected){
+            echo $selected."</br>";
+        }
+    }
+}
+
 echo "<br>";
 echo "Gdzie spędzałeś/aś Sylwestra?: ".$sylwester;
 ?>
