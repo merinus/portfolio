@@ -10,7 +10,7 @@
     justify-content: center;
 }
 */
-@max-width: 1200px;
+@max-width: 100%;
 
 #center-column{
   display: flex;
@@ -18,9 +18,14 @@
   align-items: center;
 }
 
+body{
+  width: 100%;
+  margin: 0;
+}
 
 .top_info{
   #center-column;
+  width: 100%;
 }
 
 
@@ -28,11 +33,12 @@
 #cookies{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .empty{
   width: @max-width;
-  height: 20px;
+  height: 30px;
 }
 
 .cookies_info{
@@ -49,7 +55,7 @@
 
 #first{
   #center-column;
-  margin: 0 auto;
+  margin: 0;
   background-position: center;
   background-size: cover;
   background-color: darkslategray;
@@ -104,13 +110,13 @@ h1{
 }*/
 
 #second{
-  margin: 0 auto;
+  margin: 0;
+  background-image: url("../images/molo.jpeg");
   background-position: center;
   background-size: cover;
-  background-color: darksalmon;
-  height: 100vh;
+  background-color: burlywood;
+  background-attachment: fixed;
   max-width: @max-width;
-  position: relative;
   #center-column;
   justify-content: center;
 }
@@ -125,10 +131,9 @@ footer{
   margin: 5px auto;
   width: @max-width;
   padding: 10px 0;
-  height: 36px;
+  height: 56px;
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 30px;
 }

@@ -6,12 +6,15 @@
  * Time: 10:00
  */
 $to = "marcin.wladymiruk@gmail.com";
-$subject = $_POST["full_name"];
-$txt = $_POST["message"];
-$headers = $_POST["email"];
-$fireworks = $_POST["fireworks"];
-$music = $_POST["music"];
-$sylwester = $_POST["sylwester"];
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $subject = test_input($_POST["full_name"]);
+    $txt = test_input($_POST["message"]);
+    $headers = test_input($_POST["email"]);
+    $fireworks = test_input($_POST["fireworks"]);
+    $music = test_input($_POST["music"]);
+    $sylwester = test_input($_POST["sylwester"]);
+}
+
 
 mail($to,$subject,$txt,$headers);
 
@@ -42,4 +45,11 @@ if(isset($_POST['submit'])){//to run PHP script on submit
 
 echo "<br>";
 echo "Gdzie spędzałeś/aś Sylwestra?: ".$sylwester;
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>

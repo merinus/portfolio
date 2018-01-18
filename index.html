@@ -2,6 +2,8 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="author" content="Marcin Wladymiruk">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <title>Portfolio</title>
@@ -9,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -86,7 +91,7 @@
                 <h2>Prześlij do mnie informacje o sobie:</h2>
             </div>
             <div class="email_form">
-                    <form action="php/action_page.php" method="post">
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                         <div class="my_form">
                             <div>
                                 <p>Ulubiony gatunek muzyki:</p>
@@ -128,13 +133,21 @@
 
         </section>
 
-        <footer>
-            <div class="bottom_info">Obserwuj mnie na:</div>
-            <img src="images/iconmonstr-facebook-6-32.png">
-            <img src="images/iconmonstr-twitter-3-32.png">
-            <img src="images/iconmonstr-google-plus-1-32.png">
+        <footer class="d-flex flex-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="bottom_info">
+                        <div class="col-xs-2">Obserwuj mnie na:</div>
+                    </div>
+                    <div class="col-xs-2"><img src="images/iconmonstr-facebook-6-32.png"></div>
+                    <div class="col-xs-2"><img src="images/iconmonstr-twitter-3-32.png"></div>
+                    <div class="col-xs-2"><img src="images/iconmonstr-google-plus-1-32.png"></div>
+                    <div class="col-xs-2"></div>
+                </div>
+            </div>
         </footer>
 </body>
 <script src="js/cookies.js"></script>
-<script src="js/images.js"></script>
+<script src="js/images2.js"></script>
 </html>
