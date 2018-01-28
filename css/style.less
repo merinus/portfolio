@@ -23,6 +23,21 @@ body{
   margin: 0;
 }
 
+#header{
+  div .top_info{
+    div .cookies{
+      div .empty{
+        div .cookies_info{
+          width: @max-width;
+          display: flex;
+          justify-content: center;
+          background-color: darkolivegreen;
+        }
+      }
+    }
+  }
+}
+
 .top_info{
   #center-column;
   width: 100%;
@@ -41,12 +56,6 @@ body{
   height: 30px;
 }
 
-.cookies_info{
-  width: @max-width;
-  display: flex;
-  justify-content: center;
-  background-color: darkolivegreen;
-}
 
 .buttons{
   display: flex;
@@ -59,9 +68,24 @@ body{
   background-position: center;
   background-size: cover;
   background-color: darkslategray;
-  height: 110vh;
+  min-height: 110vh;
   max-width: @max-width;
   /*position: relative;*/
+}
+
+#first{
+  div.container-fluid{
+    div.row .justify-content-center{
+      div.col-xs-4 .my_box{
+        div.frame{
+          #center-column;
+          width: 350px;
+          height: 233px;
+        }
+      }
+
+    }
+  }
 }
 
 .top_sentence{
@@ -79,12 +103,6 @@ h1{
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-}
-
-.frame{
-  #center-column;
-  width: 350px;
-  height: 233px;
 }
 
 .under_photo{
@@ -121,11 +139,17 @@ h1{
   justify-content: center;
 }
 
-.my_form{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+#second{
+  .email_form{
+    div.container .my_form{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 }
+
+
 
 footer{
   margin: 5px auto;
@@ -137,6 +161,16 @@ footer{
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 30px;
 }
+
+footer{
+  div.container{
+    div.row .bottom_row{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
 
 @media only screen and (max-width: 320px){
   header{
