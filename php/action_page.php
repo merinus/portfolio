@@ -7,9 +7,31 @@
  */
 $to = "marcin.wladymiruk@gmail.com";
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $subject = test_input($_POST["full_name"]);
+
+    /*$subject = test_input($_POST["email"]);*/
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+    } else {
+        $subject = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($subject, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
+    }
+
     $txt = test_input($_POST["message"]);
-    $headers = test_input($_POST["email"]);
+
+    /*$headers = test_input($_POST["telephone"]);*/
+    if (empty($_POST["telephone"])) {
+        $telErr = "Telephone number is required";
+    } else {
+        $headers = test_input($_POST["telephone"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($headers, FILTER_VALIDATE_INT, array("options" => array("min_range"=>100000000, "max_range" => 999999999)))) {
+            $telErr = "Invalid email format";
+        }
+    }
+
     $fireworks = test_input($_POST["fireworks"]);
     $music = test_input($_POST["music"]);
     $sylwester = test_input($_POST["sylwester"]);

@@ -19,7 +19,7 @@ body {
   width: 100%;
   margin: 0;
 }
-#header div .top_info div .cookies div .empty div .cookies_info {
+header div .top_info div .cookies div .empty div .cookies_info {
   width: 100%;
   display: flex;
   justify-content: center;
