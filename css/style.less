@@ -24,42 +24,38 @@ body{
 }
 
 header{
-  div .top_info{
-    div .cookies{
-      div .empty{
-        div .cookies_info{
+  div.top_info{
+    #center-column;
+    width: 100%;
+    div#cookies{
+      #center-column;
+      width: 100%;
+      div.empty{
+        width: @max-width;
+        height: 30px;
+        div.cookies_info{
           width: @max-width;
           display: flex;
           justify-content: center;
           background-color: darkolivegreen;
+        }
+        div.buttons{
+          display: flex;
+          justify-content: center;
         }
       }
     }
   }
 }
 
-.top_info{
-  #center-column;
-  width: 100%;
-}
-
-
-
-#cookies{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.empty{
-  width: @max-width;
-  height: 30px;
-}
-
-
-.buttons{
-  display: flex;
-  justify-content: center;
+.top_sentence{
+  margin-top: 10px;
+  h1{
+    font-size: 50px;
+    color: brown;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 #first{
@@ -70,44 +66,24 @@ header{
   background-color: darkslategray;
   min-height: 110vh;
   max-width: @max-width;
-  /*position: relative;*/
-}
-
-#first{
   div.container-fluid{
     div.row .justify-content-center{
-      div.col-xs-4 .my_box{
+      div.col-4 .mybox{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
         div.frame{
           #center-column;
           width: 350px;
           height: 233px;
         }
+        div.under_photo{
+          width: 350px;
+          margin: 20px;
+        }
       }
-
     }
   }
-}
-
-.top_sentence{
-  margin-top: 10px;
-}
-
-h1{
-  font-size: 50px;
-  color: brown;
-  display: flex;
-  justify-content: center;
-}
-
-.photos{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.under_photo{
-  width: 350px;
-  margin: 20px;
 }
 
 #photo1, #photo2, #photo3{
@@ -137,9 +113,6 @@ h1{
   max-width: @max-width;
   #center-column;
   justify-content: center;
-}
-
-#second{
   .email_form{
     div.container .my_form{
       display: flex;
@@ -149,24 +122,17 @@ h1{
   }
 }
 
-
-
 footer{
   margin: 5px auto;
   width: @max-width;
   padding: 10px 0;
   height: 56px;
-  display: flex;
-  justify-content: space-around;
+  /*display: flex;
+  justify-content: space-around;*/
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 30px;
-}
-
-footer{
   div.container{
-    div.row .bottom_row{
-      display: flex;
-      justify-content: space-around;
+    div.row .justify-content-around{
     }
   }
 }

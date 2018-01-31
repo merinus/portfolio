@@ -8,29 +8,35 @@
 $to = "marcin.wladymiruk@gmail.com";
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
+    /*$headers = test_input($_POST["telephone"]);*/
+    if (empty($_POST["telephone"])) {
+        $telErr = "Telephone number is required";
+        die($telErr);
+    } else {
+        $headers = test_input($_POST["telephone"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($headers, FILTER_VALIDATE_INT, array("options" => array("min_range"=>100000000, "max_range" => 999999999)))) {
+            $telErr = "Invalid phone number format";
+            die($telErr);
+        }
+    }
+
+
     /*$subject = test_input($_POST["email"]);*/
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
+        die($emailErr);
     } else {
         $subject = test_input($_POST["email"]);
         // check if e-mail address is well-formed
         if (!filter_var($subject, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format";
+            die($emailErr);
         }
     }
 
     $txt = test_input($_POST["message"]);
 
-    /*$headers = test_input($_POST["telephone"]);*/
-    if (empty($_POST["telephone"])) {
-        $telErr = "Telephone number is required";
-    } else {
-        $headers = test_input($_POST["telephone"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($headers, FILTER_VALIDATE_INT, array("options" => array("min_range"=>100000000, "max_range" => 999999999)))) {
-            $telErr = "Invalid email format";
-        }
-    }
 
     $fireworks = test_input($_POST["fireworks"]);
     $music = test_input($_POST["music"]);
@@ -38,16 +44,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 
-mail($to,$subject,$txt,$headers);
+//mail($to,$subject,$txt,$headers);
 
 echo "<h2>Przesłane do mnie informacje:</h2>";
-echo "Twoje imię i nazwisko: ".$subject;
+
+echo "E-mail: ".$subject;
 echo "<br>";
-echo "Twój e-mail: ".$headers;
+echo "Numer telefonu: ".$headers;
 echo "<br>";
 echo "Twoja wiadomość: ".$txt;
 echo "<br>";
-if ($fireworks == "yes"){
+/*if ($fireworks == "yes"){
     $fireworks = "Tak";
 } else{
     $fireworks = "Nie";
@@ -66,7 +73,7 @@ if(isset($_POST['submit'])){//to run PHP script on submit
 }
 
 echo "<br>";
-echo "Gdzie spędzałeś/aś Sylwestra?: ".$sylwester;
+echo "Gdzie spędzałeś/aś Sylwestra?: ".$sylwester;*/
 
 function test_input($data) {
     $data = trim($data);
