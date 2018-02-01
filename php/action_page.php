@@ -37,10 +37,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $txt = test_input($_POST["message"]);
 
+    $f_name = test_input($_POST["f_name"]);
+    $l_name = test_input($_POST["l_name"]);
 
-    $fireworks = test_input($_POST["fireworks"]);
-    $music = test_input($_POST["music"]);
-    $sylwester = test_input($_POST["sylwester"]);
+    $city = test_input($_POST["city"]);
+    $street = test_input($_POST["street"]);
+//    $fireworks = test_input($_POST["fireworks"]);
+//    $music = test_input($_POST["music"]);
+//    $sylwester = test_input($_POST["sylwester"]);
 }
 
 
@@ -54,6 +58,7 @@ echo "Numer telefonu: ".$headers;
 echo "<br>";
 echo "Twoja wiadomość: ".$txt;
 echo "<br>";
+
 /*if ($fireworks == "yes"){
     $fireworks = "Tak";
 } else{
@@ -82,5 +87,40 @@ function test_input($data) {
     return $data;
 }
 
+// Database connection
+
+$link = mysqli_connect("portfolio.test", "root", "12345", "new_test");
+
+if ($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+    echo "<br>";
+}
+
+echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
+echo "<br>";
+
+//INSERTING DATA TO DATABASE
+
+//----customers table----
+$sql = "INSERT INTO customers (first_name, last_name) VALUES ('$f_name', '$l_name')";
+
+if(mysqli_query($link, $sql)){
+    echo "Records inserted successfully to 'customers' table.";
+    echo "<br>";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    echo "<br>";
+}
+die;
+//----address table----
+$sql = "INSERT INTO address (city, street) VALUES ('$city', '$street')";
+
+if(mysqli_query($link, $sql)){
+    echo "Records inserted successfully to 'address' table.";
+    echo "<br>";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    echo "<br>";
+}
 
 ?>
