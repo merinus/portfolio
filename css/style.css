@@ -62,32 +62,19 @@ header div.top_info div#cookies div.empty div.buttons {
   background-position: center;
   background-size: cover;
   background-color: darkslategray;
-  min-height: 110vh;
+  min-height: 100vh;
   max-width: 100%;
 }
-#first div.container-fluid div.row .justify-content-center div.col-4 div.mybox {
+#first div.container-fluid div.row div.col-lg-4 {
   display: flex;
   justify-content: center;
-  width: 300px;
-  height: 220px;
-  margin-bottom: 10px;
 }
-#first div.container-fluid div.row .justify-content-center div.col-4 div.mybox div.frame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  height: 200px;
+#first div.container-fluid div.row div.col-lg-4 div.mybox {
+  max-width: 300px;
 }
-#first div.container-fluid div.row .justify-content-center div.col-4 div.mybox div.under_photo {
-  width: 300px;
-  margin: 20px;
-}
-#photo1,
-#photo2,
-#photo3 {
-  height: 80%;
-  width: 80%;
+#first div.container-fluid div.row div.col-lg-4 div.mybox div.frame {
+  width: 350px;
+  height: 233px;
 }
 /*#s {
     margin: 0 auto;
@@ -113,10 +100,14 @@ header div.top_info div#cookies div.empty div.buttons {
   align-items: center;
   justify-content: center;
 }
-#second .email_form div.container .my_form {
+#second .email_form div.container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+#second .email_form div.container div.row {
+  display: flex;
+  justify-content: center;
 }
 footer {
   margin: 5px auto;
@@ -128,7 +119,7 @@ footer {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 30px;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 416px) {
   header {
     margin: 0 auto;
   }
@@ -148,7 +139,7 @@ footer {
   #first {
     display: flex;
     justify-content: center;
-    max-width: 300px;
+    max-width: 416px;
     height: 1400px;
   }
   .photos {
@@ -157,7 +148,8 @@ footer {
     margin: 0 auto;
   }
   .frame {
-    width: 280px;
+    max-width: 260px;
+    max-height: 173px;
     display: flex;
     justify-content: center;
   }
@@ -167,11 +159,11 @@ footer {
   #photo1,
   #photo2,
   #photo3 {
-    width: 260px;
-    height: 173px;
+    max-width: 260px;
+    max-height: 173px;
   }
   #second {
-    max-width: 300px;
+    max-width: 416px;
     height: 1000px;
   }
   .info_sentence {
@@ -184,7 +176,7 @@ footer {
     align-items: center;
   }
   footer {
-    width: 300px;
+    max-width: 416px;
     height: 180px;
     display: flex;
     flex-direction: column;

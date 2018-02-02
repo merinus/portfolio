@@ -58,43 +58,69 @@ header{
   }
 }
 
-#first {
-  #center-column;
-  margin: 0;
-  background-position: center;
-  background-size: cover;
-  background-color: darkslategray;
-  min-height: 110vh;
-  max-width: @max-width;
-  div.container-fluid {
-    div.row .justify-content-center {
-      div.col-4 {
-        div.mybox {
-          display: flex;
-          justify-content: center;
-          width: 300px;
-          height: 220px;
-          margin-bottom: 10px;
-          div.frame {
-            #center-column;
-            width: 300px;
-            height: 200px;
-          }
-          div.under_photo {
-            width: 300px;
-            margin: 20px;
+#first{
+    #center-column;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-color: darkslategray;
+    min-height: 100vh;
+    max-width: @max-width;
+  div.container-fluid{
+    div.row{
+      div.col-lg-4{
+        display: flex;
+        justify-content: center;
+
+        div.mybox{
+          max-width: 300px;
+
+          div.frame{
+            width: 350px;
+            height: 233px;
           }
         }
       }
-
     }
   }
 }
 
-#photo1, #photo2, #photo3{
-  height: 80%;
-  width: 80%;
-}
+//#first {
+//  #center-column;
+//  margin: 0;
+//  background-position: center;
+//  background-size: cover;
+//  background-color: darkslategray;
+//  min-height: 100vh;
+//  max-width: @max-width;
+//  div.container-fluid {
+//    div.row .justify-content-center {
+//      div.col-4 {
+//        div.mybox {
+//          display: flex;
+//          justify-content: center;
+//          max-width: 300px;
+//          max-height: 400px;
+//          margin-bottom: 10px;
+//          div.frame {
+//            //#center-column;
+//            max-width: 300px;
+//            max-height: 200px;
+//          }
+//          div.under_photo {
+//            max-width: 300px;
+//            margin: 20px;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+//#photo1, #photo2, #photo3{
+//  height: 80%;
+//  width: 80%;
+//}
 
 /*#s {
     margin: 0 auto;
@@ -119,10 +145,15 @@ header{
   #center-column;
   justify-content: center;
   .email_form{
-    div.container .my_form{
+    div.container{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+
+      div.row{
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
@@ -143,7 +174,7 @@ footer{
 }
 
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 416px){
   header{
     margin: 0 auto;
   }
@@ -163,7 +194,7 @@ footer{
   #first{
     display: flex;
     justify-content: center;
-    max-width: 300px;
+    max-width: 416px;
     height: 1400px;
   }
   .photos{
@@ -172,7 +203,8 @@ footer{
     margin: 0 auto;
   }
   .frame{
-    width: 280px;
+    max-width: 260px;
+    max-height: 173px;
     display: flex;
     justify-content: center;
   }
@@ -180,11 +212,11 @@ footer{
     width: 260px;
   }
   #photo1, #photo2, #photo3{
-    width: 260px;
-    height: 173px;
+    max-width: 260px;
+    max-height: 173px;
   }
   #second{
-    max-width: 300px;
+    max-width: 416px;
     height: 1000px;
   }
   .info_sentence{
@@ -195,7 +227,7 @@ footer{
     #center-column;
   }
   footer{
-    width: 300px;
+    max-width: 416px;
     height: 180px;
     #center-column;
     img{
